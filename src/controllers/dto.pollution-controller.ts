@@ -1,4 +1,4 @@
-import { IsNumber, IsString, ValidateNested } from "class-validator";
+import { IsNumber, IsString, ValidateNested, IsOptional } from "class-validator";
 
 export class Pollution{
 
@@ -17,9 +17,11 @@ export class Pollution{
 export class NearestCityPollutionQueryParams {
     
     @IsNumber()
+    @IsOptional()
     lat: number;
 
     @IsNumber()
+    @IsOptional()
     lon: number;
 }
 

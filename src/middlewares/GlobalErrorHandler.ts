@@ -10,7 +10,7 @@ type Errors<T> = HttpError | Error
  */
 export class GlobalErrorHandler implements ExpressErrorMiddlewareInterface {
   async error<T>(error: Errors<T>, request: { traceId: string } & Request, res: Res): Promise<void> {
-    console.log('error')
+    console.log(error);
     let err;
     if (error instanceof EntityNotFoundError) {
       err = { statusCode: 404, message: "EntityNotFound" }

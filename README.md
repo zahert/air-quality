@@ -1,7 +1,3 @@
-# Yassir-challenge
-
-Yassir coding Challenge submission
-
 # Project Preparation
 
 make sure you have a running mysql instance
